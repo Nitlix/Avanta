@@ -1,6 +1,6 @@
 {
     "name": "avanta",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "🚅 The backbone for auth, simplifying the OAuth process for developers.",
     "main": "./dist/exports.js",
     "keywords": [],

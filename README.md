@@ -11,7 +11,7 @@
 -----
 
 <p align="center">
-    <1.0.3> Packaged with 💝 by <a href="https://github.com/nitlix">nitLix</a> ⠀
+    <1.0.4> Packaged with 💝 by <a href="https://github.com/nitlix">nitLix</a> ⠀
 </p>
 
 ## 🍭 Use with NPM
@@ -43,14 +43,17 @@ const avt = new Avanta({
 });
 
 // Providers are type-safe and autocompleted!
-const googleOAuthLink = avt.providers.my_google_provider.getOAuthLink(
-    "http://localhost:3000/auth/google",
-    "",
-    [
-        "https://www.googleapis.com/auth/userinfo.email",
-        "https://www.googleapis.com/auth/userinfo.profile",
-    ],
-);
+const googleOAuthLink = avt
+    .providers
+    .my_google_provider
+    .getOAuthLink(
+        "http://localhost:3000/auth/google",
+        [
+            "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/userinfo.profile",
+        ],
+        "myState",
+    );
 ```
 
 ## 🔥 Features

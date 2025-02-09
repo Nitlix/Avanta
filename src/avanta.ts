@@ -38,8 +38,8 @@ export default class Avanta<TProviders extends Record<string, Provider>> {
 
                         getOauthLink: (
                             redirectUri: string,
-                            state: string = "",
-                            scopes: string[]
+                            scopes: string[],
+                            state: string = ""
                         ) =>
                             getOauthLink_google(
                                 redirectUri,
@@ -72,8 +72,8 @@ export default class Avanta<TProviders extends Record<string, Provider>> {
 
                         getOauthLink: (
                             redirectUri: string,
-                            state: string = "",
-                            scopes: string[]
+                            scopes: string[],
+                            state: string = ""
                         ) =>
                             getOauthLink_discord(
                                 redirectUri,

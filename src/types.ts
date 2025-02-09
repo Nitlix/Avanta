@@ -26,8 +26,8 @@ export type Provider_Google = {
 export type Provider_Google_Functions = {
     getOauthLink: (
         redirectUri: string,
-        state: string,
-        scopes: string[]
+        scopes: string[],
+        state?: string
     ) => string;
     getTokens: (
         code: string,
@@ -45,8 +45,8 @@ export type Provider_Discord = {
 export type Provider_Discord_Functions = {
     getOauthLink: (
         redirectUri: string,
-        state: string,
-        scopes: string[]
+        scopes: string[],
+        state?: string
     ) => string;
     getTokens: (
         code: string,
