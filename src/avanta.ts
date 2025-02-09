@@ -35,17 +35,17 @@ export default class Avanta<TProviders extends Record<string, Provider>> {
                         type: "GOOGLE",
                         clientId: clientId,
                         clientSecret: clientSecret,
-                        scopes: providerData.scopes,
 
                         getOauthLink: (
                             redirectUri: string,
-                            state: string = ""
+                            state: string = "",
+                            scopes: string[]
                         ) =>
                             getOauthLink_google(
                                 redirectUri,
                                 clientId,
                                 state,
-                                providerData.scopes
+                                scopes
                             ),
 
                         getTokens: async (
@@ -69,16 +69,16 @@ export default class Avanta<TProviders extends Record<string, Provider>> {
                         type: "DISCORD",
                         clientId: clientId,
                         clientSecret: clientSecret,
-                        scopes: providerData.scopes,
 
                         getOauthLink: (
                             redirectUri: string,
-                            state: string = ""
+                            state: string = "",
+                            scopes: string[]
                         ) =>
                             getOauthLink_discord(
                                 redirectUri,
                                 clientId,
-                                providerData.scopes,
+                                scopes,
                                 state
                             ),
                         getTokens: async (
@@ -90,7 +90,8 @@ export default class Avanta<TProviders extends Record<string, Provider>> {
                                 clientId,
                                 clientSecret,
                                 code,
-                                redirectUri
+                                redirectUri,
+                                state
                             ),
                         getInfo: getInfo_discord,
                     };

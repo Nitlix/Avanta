@@ -21,11 +21,14 @@ export type ProviderWithFunctions =
 export type Provider_Google = {
     clientId: string;
     clientSecret: string;
-    scopes: string[];
 };
 
 export type Provider_Google_Functions = {
-    getOauthLink: (redirectUri: string, state: string) => string;
+    getOauthLink: (
+        redirectUri: string,
+        state: string,
+        scopes: string[]
+    ) => string;
     getTokens: (
         code: string,
         redirectUri: string,
@@ -37,11 +40,14 @@ export type Provider_Google_Functions = {
 export type Provider_Discord = {
     clientId: string;
     clientSecret: string;
-    scopes: string[];
 };
 
 export type Provider_Discord_Functions = {
-    getOauthLink: (redirectUri: string, state: string) => string;
+    getOauthLink: (
+        redirectUri: string,
+        state: string,
+        scopes: string[]
+    ) => string;
     getTokens: (
         code: string,
         redirectUri: string,
